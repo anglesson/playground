@@ -1,6 +1,6 @@
 <?php
 
-namespace Anglesson\Playground\TDD\Dollar;
+namespace App\TDD\Dollar;
 
 use PHPUnit\Framework\TestCase;
 
@@ -10,11 +10,8 @@ class DollarTest extends TestCase
     {
         $five = new Dollar(5);
 
-        $product = $five->times(2);
-        self::assertEquals(10, $product->amount);
-
-        $product = $five->times(3);
-        self::assertEquals(15, $product->amount);
+        self::assertEquals(new Dollar(10), $five->times(2));
+        self::assertEquals(new Dollar(15), $five->times(3));
     }
 
     public function testEquality()

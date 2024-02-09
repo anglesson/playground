@@ -1,10 +1,10 @@
 <?php
 
-namespace Anglesson\Playground\TDD\Dollar;
+namespace App\TDD\Dollar;
 
 class Dollar
 {
-    public int $amount;
+    private int $amount;
 
     public function __construct(int $amount)
     {
